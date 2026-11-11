@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+:root{--blue:#3867e9;--ink:#202124;--line:#dedfe3}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:24px 24px 24px clamp(105px,9vw,160px);display:flex;align-items:center;justify-content:flex-start;color:var(--ink);font-family:Roboto,Arial,sans-serif;background:#17251e url("background-telenet.png") center/cover no-repeat fixed}
+.demo-label{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:2;padding:8px 14px;border-radius:999px;background:#fff4ce;color:#684d00;font-size:11px;white-space:nowrap}
+.card{width:min(100%,320px);min-height:420px;padding:12px;border-radius:17px;background:#fff;box-shadow:0 18px 55px #0007}
+.form-logo{display:flex;justify-content:center;align-items:center;padding:5px 9px 10px}
+.form-logo img{display:block;width:54px;height:auto;object-fit:contain}
+.intro{margin:0;padding:13px 9px 15px;border-bottom:1px solid var(--line);color:#4f535b;font-size:13px;line-height:1.5}
+.field{padding:14px 9px 11px;border-bottom:1px solid var(--line)}
+label{display:block;margin-bottom:9px;color:#6c7078;font-size:14px}
+input:not([type=checkbox]),textarea{width:100%;border:0;outline:0;color:#202124;background:transparent;font:14px Roboto,Arial,sans-serif;resize:vertical}
+input::placeholder,textarea::placeholder{color:#a1a4aa}
+.consent{display:flex;align-items:flex-start;gap:8px;margin:13px 8px 4px;color:#656b75;font-size:11px;line-height:1.4}
+.consent input{margin-top:2px;flex:0 0 auto}
+.primary,.download-button{width:100%;margin-top:14px;padding:14px 12px;border:0;border-radius:12px;background:var(--blue);color:#fff;font:500 15px Roboto,Arial,sans-serif;cursor:pointer}
+.primary:hover,.download-button:hover{filter:brightness(.96)}
+.hint{margin:11px 8px 3px;color:#777;font-size:10px;line-height:1.45;text-align:center}
+.email-summary{margin:12px 2px 3px;padding:11px 10px;border-radius:9px;background:#f4f6fa;overflow-wrap:anywhere}
+.email-summary strong{display:block;font-size:14px;font-weight:500}
+.summary-label{display:block;margin-bottom:5px;color:#6c7078;font-size:12px}
+.error{margin:10px 3px 0;padding:10px;border:1px solid #f2c3bf;border-radius:9px;background:#fff1f0;color:#a52c25;font-size:12px;line-height:1.4}
+.auth-success{min-height:350px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;color:#217346;font-size:15px;font-weight:500;text-align:center}
+.success-check{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:#26a65b;color:#fff;font-size:29px;font-weight:700}
+#loading,#final-loading{min-height:390px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#626873;font-size:14px}
+.spinner{width:34px;height:34px;border:3px solid #e5e9f4;border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none!important}
+.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#0c121e94;backdrop-filter:blur(3px)}
+.modal-panel{position:relative;width:min(100%,360px);padding:30px 24px 24px;border-radius:18px;background:#fff;box-shadow:0 22px 70px #0005;text-align:center}
+.modal-close{position:absolute;top:10px;right:13px;border:0;background:transparent;color:#707782;font-size:27px;cursor:pointer}
+.modal-icon{width:48px;height:48px;display:grid;place-items:center;margin:0 auto 14px;border-radius:50%;background:#eaf8ef;color:#219653;font-size:25px}
+.modal-panel h2{margin:0 0 9px;font-size:20px;font-weight:600}
+.modal-panel p{margin:0;color:#666d78;font-size:13px;line-height:1.5}
+.modal-panel .download-button{margin-top:20px;background:#1f8a54}
+body.page-two{background-image:url("background-page-two.png");background-position:center;background-size:cover;background-repeat:no-repeat}
+@media(max-width:480px){body{justify-content:center;padding:60px 16px 16px;background-position:center}.card{width:min(100%,320px);border-radius:15px}.demo-label{top:12px;font-size:9px}}
+
+
+/* Disclosure visible beside the demo-only password fields */
+.privacy-notice {
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(70, 110, 150, 0.08);
+  color: #526273;
+  font-size: 12px;
+  line-height: 1.45;
+}
